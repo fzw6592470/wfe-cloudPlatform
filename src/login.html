@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+		<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0" />
+		<meta content="always" name="referrer" />
+		<title>城市智慧停车平台系统</title>
+		<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		<link href="css/platform.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body class="cui-login-bg">
+		
+		<div id="cui-login" class="container">
+			<h1><img src="images/login_mingcheng.png"></h1>
+			
+			<form class="form-horizontal col-xs-9 cui-login-form" id="cui_login_form">
+				<p>
+					<label class="cui-login-username" for="cui-username">
+						<input class="form-control" maxlength="12" name="username" id="cui-username" type="text" placeholder="请输入用户名" />
+					</label>
+				</p>
+				<p>
+					<label class="cui-login-passwd" for="cui-password">
+						<input class="form-control" maxlength="6"  name="password" id="cui-password" type="password"  placeholder="请输入密码" />
+					</label>
+				</p>
+				<p>
+					<label class="cui-login-varify" for="cui-varify">
+						<input class="form-control cui-login-valid" maxlength="4"  name="varifycode" id="cui-varify" type="text" placeholder="请输入验证码" />
+					</label>
+					<a href="javascript:void(0);" id="cui-login-validcode">
+						<img src="" />
+					</a>
+				</p>
+				<button type="button" class="btn btn-login" id="cui_login_btn">登&nbsp;&nbsp;&nbsp;&nbsp;录</button>
+			</form>
+		</div>
+		<!--
+        	作者：lele199007@sina.com
+        	时间：2017-07-03
+        	描述：标准弹出提示框
+        -->
+		<div class="cui-alert" id="cui_alert">
+			<div class="cui-alert-box">
+				<h2 class="cui-alert-title">
+					提示
+					<a href="javascript:void(0);" class="cui-alert-close">X</a>
+				</h2>
+				
+				<div class="cui-alert-message">
+					<p class="cui-alert-icon"><em>!</em></p>
+					<p id="cui_alert_msg">验证码错误！</p>
+				</div>
+				
+				<div class="cui-alert-tools">
+					<button class="cui-alert-btn cui-alert-cancel">取消</button>
+					<button class="cui-alert-btn cui-alert-sure">确定</button>
+				</div>
+			</div>
+		</div>
+		<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/base.js" ></script>
+		<script type="text/javascript" src="js/login.js" ></script>
+	</body>
+</html>

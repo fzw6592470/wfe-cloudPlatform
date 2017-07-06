@@ -1,0 +1,65 @@
+@charset "UTF-8";
+/* author "MartinCui"  date   2017-06-30 use    platform system */
+* { padding: 0; margin: 0; }
+
+input, a, button, button:hover, a:hover, a:link, a:visited, button:visited, select, select:hover { outline: 0; }
+
+html, body, h1, h2, h3, h4, h5, h6, div, p, aside, blockquote, q, section, article, video, audio, object, hgroup { display: block; margin: 0; padding: 0; }
+
+html, body { width: 100%; height: 100%; overflow: hidden; font-family: "微软雅黑", "arial, helvetica, sans-serif"; font-size: 12px; background-color: #f4f4f5; }
+
+ul, ol { list-style: none; }
+
+.color_green { color: #13a189 !important; }
+
+.bgcolor_green { background-color: #13a189 !important; }
+
+a, a:hover, a:active, a:link, a:visited { text-decoration: none; }
+
+.row { padding: 0; margin: 0; }
+
+.panel { -webkit-border-radius: 0; -moz-border-radius: 0; -o-border-radius: 0; border-radius: 0; border: 0 none; }
+
+.cui-search { height: auto; padding: 5px 20px; }
+.cui-search .cui-search-component { height: 40px; }
+.cui-search .cui-search-component label { font-weight: normal; font-size: 14px; color: #30343d; height: 30px; line-height: 30px; }
+.cui-search .cui-search-component select { width: 60%; height: 30px; line-height: 30px; font-size: 14px; color: #30343d; padding-left: 10px; }
+.cui-search .cui-search-component select:hover { border: 1px solid #13a189; }
+.cui-search .cui-search-btn { width: 110px; height: 30px; line-height: 30px; font-size: 14px; color: #fff; text-align: center; padding: 0; background: url(../images/btn_sousuo_normal.png) no-repeat; -webkit-border-radius: 0; -moz-border-radius: 0; -o-border-radius: 0; border-radius: 0; border: 0 none; }
+.cui-search .cui-search-btn:hover { background: url(../images/btn_sousuo_hover.png) no-repeat; }
+
+.cui-container .panel-heading { background-color: #fff; border: 0 none; color: #30343d; padding-left: 20px; padding-right: 20px; height: 50px; }
+.cui-container .panel-heading .panel-title { border-left: 3px solid #13a189; height: 20px; line-height: 20px; font-size: 14px; padding-left: 10px; color: #13a189; float: left; width: 50%; margin-top: 5px; }
+.cui-container .panel-heading .btn-toolbar { width: 50%; float: left; margin: 0; height: 30px; text-align: right; }
+.cui-container .panel-heading .btn-toolbar .btn-group { float: right; cursor: pointer; }
+.cui-container .panel-heading .btn-toolbar button { padding: 0; margin: 0; outline: 0; -webkit-border-radius: 0; -moz-border-radius: 0; -o-border-radius: 0; border-radius: 0; border: 0 none; }
+.cui-container .panel-heading .btn-toolbar .cui-table-add { width: 30px; height: 30px; background: url(../images/btn_xiaofang_xinzeng_normal.png) no-repeat; }
+.cui-container .panel-heading .btn-toolbar .cui-table-add:hover { background: url(../images/btn_xiaofang_xinzeng_hover.png) no-repeat; }
+.cui-container .panel-heading .btn-toolbar .cui-table-update { width: 30px; height: 30px; background: url(../images/btn_xiaofang_xiugai_normal.png) no-repeat; }
+.cui-container .panel-heading .btn-toolbar .cui-table-update:hover { background: url(../images/btn_xiaofang_xiugai_hover.png) no-repeat; }
+.cui-container .panel-heading .btn-toolbar .cui-table-delete { width: 30px; height: 30px; background: url(../images/btn_xiaofang_shanchu_normal.png) no-repeat; }
+.cui-container .panel-heading .btn-toolbar .cui-table-delete:hover { background: url(../images/btn_xiaofang_shanchu_hover.png) no-repeat; }
+.cui-container .cui-container-table th, .cui-container .cui-container-table td { padding: 0; text-align: center; margin: 0; border: 1px solid #f4f4f5; height: 30px; line-height: 30px; }
+.cui-container .cui-container-table th { color: #fff; background-color: #13a189; }
+
+.cui-alert { width: 100%; height: 100%; overflow: hidden; background-color: rgba(0, 0, 0, 0.5); position: fixed; top: 0; left: 0; z-index: 10001; display: none; }
+.cui-alert .cui-alert-box { width: 396px; height: auto; background-color: #fff; position: absolute; top: 20%; left: 50%; margin-left: -198px; padding: 5px; z-index: 10002; }
+.cui-alert .cui-data-box { width: 706px; height: auto; background-color: #fff; position: absolute; top: 10%; left: 50%; margin-left: -353px; padding: 5px; z-index: 10002; }
+.cui-alert .cui-alert-title { width: 100%; height: 30px; line-height: 30px; background-color: #13a189; color: #fff; font-size: 14px; text-align: center; position: relative; }
+.cui-alert .cui-alert-title .cui-alert-close { width: 30px; height: 30px; line-height: 30px; text-align: center; color: #fff; font-size: 16px; position: absolute; right: 0; top: 0; z-index: 10003; font-family: cursive; }
+.cui-alert .cui-alert-message { width: 100%; height: auto; margin-top: 10px; background-color: #f4f4f5; }
+.cui-alert .cui-alert-message p { width: 100%; height: auto; line-height: 30px; font-size: 14px; text-align: center; color: #30343d; }
+.cui-alert .cui-alert-message p.cui-alert-icon { width: 100%; height: 148px; }
+.cui-alert .cui-alert-message p.cui-alert-icon em { width: 90px; height: 90px; border: 5px solid #83bacf; background-color: #13a189; text-align: center; line-height: 85px; font-size: 68px; color: #fff; display: block; float: left; margin-left: 148px; font-style: normal; font-weight: bold; margin-top: 29px; -webkit-border-radius: 50%; -moz-border-radius: 50%; -o-border-radius: 50%; border-radius: 50%; font-family: fantasy; }
+.cui-alert .cui-alert-message form { width: 100%; height: auto; }
+.cui-alert .cui-alert-message table { margin-bottom: 0; }
+.cui-alert .cui-alert-message td { border-top: 0 none; padding: 2px; }
+.cui-alert .cui-alert-message label { width: 30%; height: 30px; line-height: 30px; font-size: 12px; text-align: right; padding-right: 10px; }
+.cui-alert .cui-alert-message input, .cui-alert .cui-alert-message select { width: 50%; height: 30px; line-height: 30px; padding-left: 10px; border: 1px solid #e9e9e9; }
+.cui-alert .cui-alert-message input:hover, .cui-alert .cui-alert-message select:hover { border: 1px solid #13a189; }
+.cui-alert .cui-alert-message em.cui-data-must_icon { width: 10px; height: 30px; line-height: 30px; text-align: center; color: #f00; font-size: 18px; }
+.cui-alert .cui-alert-tools { width: 100%; height: 78px; margin-top: 5px; border-top: 3px solid #13a189; }
+.cui-alert .cui-alert-btn { width: 110px; height: 30px; line-height: 30px; background: url(../images/btn_sousuo_normal.png) no-repeat; text-align: center; font-size: 16px; color: #fff; border: 0 none; outline: 0; margin-left: 22.797%; float: left; margin-top: 24px; }
+.cui-alert .cui-alert-btn:hover { background: url(../images/btn_sousuo_hover.png) no-repeat; }
+
+/*# sourceMappingURL=base.css.map */

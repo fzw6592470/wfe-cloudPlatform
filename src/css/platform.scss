@@ -1,0 +1,284 @@
+@charset "UTF-8";
+
+@import "base";
+
+
+/*
+ *  登录页面    
+ */
+.cui-login-bg{
+    background: url(../images/login_bg.png) no-repeat 100% 100%;
+}
+#cui-login{
+    width: 370px;
+    height:452px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    padding:0;
+    margin-right:0;
+    margin-bottom:0;
+    margin-left: -185px;
+    margin-top: -226px;
+    
+    h1{
+        width: 100%;
+        height:42px;
+    }
+
+    .cui-login-form{ 
+        width: 360px;
+        height: 360px;
+        margin: 50px auto 0;
+        position: relative;
+        background: url(../images/login_user.png) no-repeat;
+        border: 0 none;
+        padding-top: 106px;
+        
+        p {
+            width: 100%;
+            height: 45px;
+            padding-top: 5px;
+            padding-left: 15%;
+            padding-right: 15%;
+        }
+        label {
+            width:100%;
+            height: 30px;
+            line-height: 30px;
+            border: 1px solid $color_cbcbcb;
+            overflow: hidden;
+            padding-left: 30px;
+        }
+        label:hover{
+            border-color: $color_13a189;
+        }
+        .cui-login-username{
+            background: url(../images/login_icon_yonghu_normal.png) no-repeat left center $color_fff;
+        }
+        .cui-login-username:hover{
+            background: url(../images/login_icon_yonghu_selected.png) no-repeat left center $color_fff;
+        }
+        .cui-login-passwd{
+            background: url(../images/login_icon_mima_normal.png) no-repeat left center $color_fff;
+        }
+        .cui-login-passwd:hover{
+            background: url(../images/login_icon_mima_selected.png) no-repeat left center $color_fff;
+        }
+        .cui-login-varify{
+            width: 60%;
+            float:left;
+            background: url(../images/login_icon_yanzhengma_normal.png) no-repeat left center $color_fff;
+        }
+        .cui-login-varify:hover{
+            background: url(../images/login_icon_yanzhengma_selected.png) no-repeat left center $color_fff;
+        }
+        input{
+            border: 0 none;
+            height: 30px;
+            line-height: 30px;
+            margin:0;
+            padding-left:5px;
+            padding-top:0;
+            padding-right:0;
+            padding-bottom:0;
+        }
+        #cui-login-validcode {
+            width: 35%;
+            height: 30px;
+            display: block;
+            float:left;
+            margin-left: 5%;
+        }
+        .btn-login{
+            width: 70%;
+            height: 32px;
+            @include borderRadius();
+            line-height: 32px;
+            font-size: $fz_16;
+            color: $color_fff;
+            margin-left: 15%;
+            margin-right: 15%;
+            margin-top: 20px;
+            padding:0;
+            outline: 0;
+            background: url(../images/login_btn_normal.png) no-repeat center center;
+        }
+        
+        .btn-login:hover{
+            background: url(../images/login_btn_hover.png) no-repeat center center;
+        }
+    }
+}
+
+/*
+ * 公用头部   
+ */
+.header{
+    width:100%;
+    height: 86px;
+    margin:0;
+    padding:0;
+    overflow: hidden;
+    position: relative;
+
+    .cui-platform-logo{
+        height: 86px;
+        padding:0; 
+        margin: 0;
+        float:left; 
+        background: url(../images/nav_logo_bg.png) no-repeat;
+        background-size: 100%;
+        position: absolute;
+        z-index: 2;
+        max-width: 180px;
+        
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .cui-platform-nav{
+        float: left;
+        margin:0;
+        padding: 0;
+        width: 100%;
+        padding-left:180px;
+        
+        ul{
+            width:100%;
+            height: 86px;
+            background: url(../images/nav_tab_normal.png) repeat-x;
+            margin-bottom: 0;
+        }
+        
+        li{
+            width: 11.1111%;
+            max-width: 110px;
+            height: 86px;
+            line-height: 86px;
+            float:left;
+            font-size: 16px;
+            text-align: center;
+            cursor: pointer;
+            color: $color_13a189;
+        }
+        li.active{
+            background: url(../images/nav_tab_selected.png) no-repeat center;
+            color: $color_fff;
+        }
+        li:hover{
+            background: url(../images/nav_tab_hover.png) no-repeat center;
+            color: $color_13a189;
+        }
+    }
+}
+
+/*
+ * 公共左侧菜单 
+ */
+.cui-platform-container{
+    width: 100%;
+    height:100%;
+    overflow: hidden;
+    padding:0;
+    
+    .cui-platform-row{
+        width: 100%;
+        height: 100%;
+        padding:0;
+        margin:0;
+    }
+}
+.cui-platform-menu{
+    height: 100%;
+    margin:0;
+    padding:0;
+    background-color: $color_454951;
+    max-width: 180px;
+    
+    .cui-menu-item{
+        width: 100%;
+        line-height: 30px;
+
+        a{
+            font-size: $fz_14;
+            display: block;
+            height:30px;
+            color:$color_fff;
+            padding-left: 25px;
+        }
+        a.accordion-toggle{
+            background: url(../images/left_tab_1ji_xia.png) no-repeat 145px center $color_30343d; 
+        }
+        a.collapsed{
+            background: url(../images/left_tab_1ji_shang.png) no-repeat 145px center $color_30343d; 
+        }
+    }
+    .accordion-body{
+        height:auto;
+    }
+    
+    ul{
+        width:100%;
+        height:auto;
+    }
+    li{
+        width: 100%;
+        height: 30px;
+        line-height: 30px;
+        color: $color_cbcbcb;
+        cursor: pointer;
+        list-style-type: disc;
+        list-style-position: inside;
+        text-align: left;
+        padding-left: 10%;
+        font-size: $fz_14;
+        overflow: hidden;
+        
+        a{
+            color:$color_cbcbcb;
+        }
+    }
+    li:hover,li.active{
+        background: url(../images/left_tab_selected_jiantou.png) no-repeat 145px center $color_13a189;
+        color:$color_fff;
+    }
+    
+}
+.cui-platform-content{
+    height:100%;
+    overflow: hidden;
+    margin:0;
+    padding:10px; 
+    background-color: $color_f4f4f5;
+    
+    h2{
+        width: 100%;
+        height: 30px;
+        background-color: $color_fff;
+        padding: 0 10px;
+        margin:0;
+        
+        span{
+            height: 20px;
+            line-height: 20px;
+            margin-top: 5px;
+            font-size: $fz_16;
+            border-left: 3px solid $color_13a189;
+        }
+    }
+    
+    iframe{
+        width: 100%;
+        height:100%;
+        overflow: hidden;
+        border:0 none;
+        background-color: $color_fff;
+        margin-top:10px;
+        outline: 0;
+    }
+}
+
+

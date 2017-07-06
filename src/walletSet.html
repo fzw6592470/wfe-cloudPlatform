@@ -1,0 +1,205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+		<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0" />
+		<meta content="always" name="referrer" />
+		<title>钱包充值设置</title>
+		<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="http://cdn.datatables.net/plug-ins/28e7751dbec/integration/bootstrap/3/dataTables.bootstrap.css" type="text/css" />
+		<link href="css/base.css" rel="stylesheet" type="text/css" />
+		
+
+	</head>
+	<body>
+		<!--
+        	作者：MartinCui
+        	时间：2017-07-01
+        	描述：统一搜索区域
+        -->
+		<div class="panel panel-default">
+  			<div class="panel-body row cui-search">
+    			<div class="col-sm-4 cui-search-component">
+    				<label for="rechargeType">充值方式：</label>
+    				<select id="rechargeType">
+  						<option selected="selected" value="0">微信APP充值</option>  						
+  						<option value="1">微信公众号充值</option>  						
+    				</select>
+    			</div>
+    			<div class="col-sm-4 cui-search-btngroup">
+    				<button class="btn cui-search-btn" type="button"><i></i>查询</button>
+    			</div>
+  			</div>
+		</div>
+		<!--
+        	作者：MartinCui
+        	时间：2017-07-01
+        	描述：统一查询显示内容
+        -->
+		<div class="panel panel-default cui-container">
+			<div class="panel-heading">
+				<h3 class="panel-title">钱包充值设置</h3>
+				<!--
+                	作者：MartinCui
+                	时间：2017-07-01
+                	描述： 统一加上工具栏
+                -->
+				<div class="btn-toolbar" role="toolbar" aria-label="tools">
+					<div class="btn-group" role="group" aria-label="add"><button type="button" class="btn cui-table-add" id="cui_table_add"></button></div>
+				    <div class="btn-group" role="group" aria-label="update"><button type="button" class="btn cui-table-update" id="cui_table_update"></button></div>
+				    <div class="btn-group" role="group" aria-label="delete"><button type="button" class="btn cui-table-delete" id="cui_table_delete"></button></div>
+				</div>
+			</div>
+			
+			<!--
+            	作者：lele199007@sina.com
+            	时间：2017-07-01
+            	描述：表格渲染
+            -->
+  			<div class="panel-body">
+    			<table class="table table-striped table-bordered cui-container-table">
+    				<thead>
+    					<tr>
+    						<th>选择</th>
+    						<th>商户ID</th>
+    						<th>回调地址</th>
+    						<th>APPID</th>
+    						<th>支付秘钥</th>
+    						<th>证书</th>
+    					</tr>
+    				</thead>
+    				<tbody>
+    					<tr>
+    						<td></td>
+    						<td></td>
+    						<td></td>
+    						<td></td>
+    						<td></td>
+    						<td></td>
+    					</tr>
+    				</tbody>
+    			</table>
+    			
+  			</div>
+		</div>
+		
+		<!--
+        	作者：lele199007@sina.com
+        	时间：2017-07-03
+        	描述：标准弹出提示框
+        -->
+		<div class="cui-alert" id="cui_alert">
+			<div class="cui-alert-box">
+				<h2 class="cui-alert-title">
+					提示
+					<a href="javascript:void(0);" class="cui-alert-close">X</a>
+				</h2>
+				
+				<div class="cui-alert-message">
+					<p class="cui-alert-icon"><em>!</em></p>
+					<p id="cui_alert_msg">验证码错误！</p>
+				</div>
+				
+				<div class="cui-alert-tools">
+					<button class="cui-alert-btn cui-alert-cancel">取消</button>
+					<button class="cui-alert-btn cui-alert-sure">确定</button>
+				</div>
+			</div>
+		</div>
+		
+		<div class="cui-alert cui-data-frame">
+			<div class="cui-data-box">
+				<h2 class="cui-alert-title">
+					钱包充值设置
+					<a href="javascript:void(0);" class="cui-alert-close">X</a>
+				</h2>
+				
+				<div class="cui-alert-message">
+					<form id="cui-data-form">
+						<table class="table" id="cui-data-table">
+							<tr>
+								<td>
+									<label for="recharge_type" class="cui-data-label">充值方式： </label>
+									<select id="recharge_type" class="cui-data-select">
+										<option selected="selected" value="0">App微信支付</option>
+										<option value="1">微信公众号支付</option>
+									</select>
+									<em class="cui-data-must_icon">*</em>
+								</td>
+								<td>
+									<label for="company_name" class="cui-data-label">企业名称：</label>
+									<select id="company_name" class="cui-data-select">
+										<option selected="selected" value="0">金溢科技</option>
+										<option value="1">停车管理平台</option>
+									</select>
+									<em class="cui-data-must_icon">*</em>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<label for="type" class="cui-data-label">类型： </label>
+									<select id="type" class="cui-data-select">
+										<option selected="selected" value="0">平台</option>
+										<option value="1">企业</option>
+										<option value="2">停车场</option>
+									</select>
+									<em class="cui-data-must_icon">*</em>
+								</td>
+								<td>
+									<label for="appid" class="cui-data-label">APPID：</label>
+									<input id="appid" type="text" class="cui-data-input" value="" />
+									<em class="cui-data-must_icon">*</em>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<label for="mchid" class="cui-data-label">商户号： </label>
+									<input id="mchid" type="text" class="cui-data-input" value="" />
+									<em class="cui-data-must_icon">*</em>
+								</td>
+								<td>
+									<label for="pay_key" class="cui-data-label">支付秘钥：</label>
+									<input id="pay_key" type="text" class="cui-data-input" value="" />
+									<em class="cui-data-must_icon">*</em>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<label for="certificate" class="cui-data-label">证书导入： </label>
+									<input id="certificate" type="text" class="cui-data-input" value="" />
+								</td>
+								<td>
+									<label for="reconciliation" class="cui-data-label">对账地址：</label>
+									<input id="reconciliation" type="text" class="cui-data-input" value="" />
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<label for="annotations" class="cui-data-label">注释： </label>
+									<input id="annotations" type="text" class="cui-data-input" value="" />
+								</td>
+								<td>
+								</td>
+							</tr>
+						</table>
+					</form>
+				</div>
+				
+				<div class="cui-alert-tools">
+					<button class="cui-alert-btn cui-alert-cancel">取消</button>
+					<button class="cui-alert-btn cui-data-sure">确定</button>
+				</div>
+				
+			</div>
+		</div>
+		<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script type="text/javascript" language="javascript" src="http://cdn.datatables.net/1.10.3/js/jquery.dataTables.min.js"></script>
+		<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="http://cdn.datatables.net/plug-ins/28e7751dbec/integration/bootstrap/3/dataTables.bootstrap.js" ></script>
+		<script type="text/javascript" src="js/base.js" ></script>
+		<script type="text/javascript" src="js/walletSet.js" ></script>
+	</body>
+</html>

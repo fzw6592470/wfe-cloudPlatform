@@ -1,0 +1,107 @@
+@charset "UTF-8";
+/* author "MartinCui"  date   2017-06-30 use    platform system */
+* { padding: 0; margin: 0; }
+
+input, a, button, button:hover, a:hover, a:link, a:visited, button:visited, select, select:hover { outline: 0; }
+
+html, body, h1, h2, h3, h4, h5, h6, div, p, aside, blockquote, q, section, article, video, audio, object, hgroup { display: block; margin: 0; padding: 0; }
+
+html, body { width: 100%; height: 100%; overflow: hidden; font-family: "微软雅黑", "arial, helvetica, sans-serif"; font-size: 12px; background-color: #f4f4f5; }
+
+ul, ol { list-style: none; }
+
+.color_green { color: #13a189 !important; }
+
+.bgcolor_green { background-color: #13a189 !important; }
+
+a, a:hover, a:active, a:link, a:visited { text-decoration: none; }
+
+.row { padding: 0; margin: 0; }
+
+.panel { -webkit-border-radius: 0; -moz-border-radius: 0; -o-border-radius: 0; border-radius: 0; border: 0 none; }
+
+.cui-search { height: auto; padding: 5px 20px; }
+.cui-search .cui-search-component { height: 40px; }
+.cui-search .cui-search-component label { font-weight: normal; font-size: 14px; color: #30343d; height: 30px; line-height: 30px; }
+.cui-search .cui-search-component select { width: 60%; height: 30px; line-height: 30px; font-size: 14px; color: #30343d; padding-left: 10px; }
+.cui-search .cui-search-component select:hover { border: 1px solid #13a189; }
+.cui-search .cui-search-btn { width: 110px; height: 30px; line-height: 30px; font-size: 14px; color: #fff; text-align: center; padding: 0; background: url(../images/btn_sousuo_normal.png) no-repeat; -webkit-border-radius: 0; -moz-border-radius: 0; -o-border-radius: 0; border-radius: 0; border: 0 none; }
+.cui-search .cui-search-btn:hover { background: url(../images/btn_sousuo_hover.png) no-repeat; }
+
+.cui-container .panel-heading { background-color: #fff; border: 0 none; color: #30343d; padding-left: 20px; padding-right: 20px; height: 50px; }
+.cui-container .panel-heading .panel-title { border-left: 3px solid #13a189; height: 20px; line-height: 20px; font-size: 14px; padding-left: 10px; color: #13a189; float: left; width: 50%; margin-top: 5px; }
+.cui-container .panel-heading .btn-toolbar { width: 50%; float: left; margin: 0; height: 30px; text-align: right; }
+.cui-container .panel-heading .btn-toolbar .btn-group { float: right; cursor: pointer; }
+.cui-container .panel-heading .btn-toolbar button { padding: 0; margin: 0; outline: 0; -webkit-border-radius: 0; -moz-border-radius: 0; -o-border-radius: 0; border-radius: 0; border: 0 none; }
+.cui-container .panel-heading .btn-toolbar .cui-table-add { width: 30px; height: 30px; background: url(../images/btn_xiaofang_xinzeng_normal.png) no-repeat; }
+.cui-container .panel-heading .btn-toolbar .cui-table-add:hover { background: url(../images/btn_xiaofang_xinzeng_hover.png) no-repeat; }
+.cui-container .panel-heading .btn-toolbar .cui-table-update { width: 30px; height: 30px; background: url(../images/btn_xiaofang_xiugai_normal.png) no-repeat; }
+.cui-container .panel-heading .btn-toolbar .cui-table-update:hover { background: url(../images/btn_xiaofang_xiugai_hover.png) no-repeat; }
+.cui-container .panel-heading .btn-toolbar .cui-table-delete { width: 30px; height: 30px; background: url(../images/btn_xiaofang_shanchu_normal.png) no-repeat; }
+.cui-container .panel-heading .btn-toolbar .cui-table-delete:hover { background: url(../images/btn_xiaofang_shanchu_hover.png) no-repeat; }
+.cui-container .cui-container-table th, .cui-container .cui-container-table td { padding: 0; text-align: center; margin: 0; border: 1px solid #f4f4f5; height: 30px; line-height: 30px; }
+.cui-container .cui-container-table th { color: #fff; background-color: #13a189; }
+
+.cui-alert { width: 100%; height: 100%; overflow: hidden; background-color: rgba(0, 0, 0, 0.5); position: fixed; z-index: 10001; display: none; }
+.cui-alert .cui-alert-box { width: 396px; height: auto; background-color: #fff; position: absolute; top: 20%; left: 50%; margin-left: -198px; padding: 5px; z-index: 10002; }
+.cui-alert .cui-alert-title { width: 100%; height: 30px; line-height: 30px; background-color: #13a189; color: #fff; font-size: 14px; text-align: center; position: relative; }
+.cui-alert .cui-alert-title .cui-alert-close { width: 30px; height: 30px; line-height: 30px; text-align: center; color: #fff; font-size: 16px; position: absolute; right: 0; top: 0; z-index: 10003; font-family: cursive; }
+.cui-alert .cui-alert-message { width: 100%; height: auto; margin-top: 10px; background-color: #f4f4f5; }
+.cui-alert .cui-alert-message p { width: 100%; height: auto; line-height: 30px; font-size: 14px; text-align: center; color: #30343d; }
+.cui-alert .cui-alert-message p.cui-alert-icon { width: 100%; height: 148px; }
+.cui-alert .cui-alert-message p.cui-alert-icon em { width: 90px; height: 90px; border: 5px solid #83bacf; background-color: #13a189; text-align: center; line-height: 85px; font-size: 68px; color: #fff; display: block; float: left; margin-left: 148px; font-style: normal; font-weight: bold; margin-top: 29px; -webkit-border-radius: 50%; -moz-border-radius: 50%; -o-border-radius: 50%; border-radius: 50%; font-family: fantasy; }
+.cui-alert .cui-alert-tools { width: 100%; height: 78px; margin-top: 10px; border-top: 3px solid #13a189; }
+.cui-alert .cui-alert-btn { width: 110px; height: 30px; line-height: 30px; background: url(../images/btn_sousuo_normal.png) no-repeat; text-align: center; font-size: 16px; color: #fff; border: 0 none; outline: 0; margin-left: 55px; float: left; margin-top: 24px; }
+.cui-alert .cui-alert-btn:hover { background: url(../images/btn_sousuo_hover.png) no-repeat; }
+
+/* 登录页面     */
+.cui-login-bg { background: url(../images/login_bg.png) no-repeat 100% 100%; }
+
+#cui-login { width: 370px; height: 452px; position: fixed; top: 50%; left: 50%; z-index: 1; padding: 0; margin-right: 0; margin-bottom: 0; margin-left: -185px; margin-top: -226px; }
+#cui-login h1 { width: 100%; height: 42px; }
+#cui-login .cui-login-form { width: 360px; height: 360px; margin: 50px auto 0; position: relative; background: url(../images/login_user.png) no-repeat; border: 0 none; padding-top: 106px; }
+#cui-login .cui-login-form p { width: 100%; height: 45px; padding-top: 5px; padding-left: 15%; padding-right: 15%; }
+#cui-login .cui-login-form label { width: 100%; height: 30px; line-height: 30px; border: 1px solid #cbcbcb; overflow: hidden; padding-left: 30px; }
+#cui-login .cui-login-form label:hover { border-color: #13a189; }
+#cui-login .cui-login-form .cui-login-username { background: url(../images/login_icon_yonghu_normal.png) no-repeat left center #fff; }
+#cui-login .cui-login-form .cui-login-username:hover { background: url(../images/login_icon_yonghu_selected.png) no-repeat left center #fff; }
+#cui-login .cui-login-form .cui-login-passwd { background: url(../images/login_icon_mima_normal.png) no-repeat left center #fff; }
+#cui-login .cui-login-form .cui-login-passwd:hover { background: url(../images/login_icon_mima_selected.png) no-repeat left center #fff; }
+#cui-login .cui-login-form .cui-login-varify { width: 60%; float: left; background: url(../images/login_icon_yanzhengma_normal.png) no-repeat left center #fff; }
+#cui-login .cui-login-form .cui-login-varify:hover { background: url(../images/login_icon_yanzhengma_selected.png) no-repeat left center #fff; }
+#cui-login .cui-login-form input { border: 0 none; height: 30px; line-height: 30px; margin: 0; padding-left: 5px; padding-top: 0; padding-right: 0; padding-bottom: 0; }
+#cui-login .cui-login-form #cui-login-validcode { width: 35%; height: 30px; display: block; float: left; margin-left: 5%; }
+#cui-login .cui-login-form .btn-login { width: 70%; height: 32px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; line-height: 32px; font-size: 16px; color: #fff; margin-left: 15%; margin-right: 15%; margin-top: 20px; padding: 0; outline: 0; background: url(../images/login_btn_normal.png) no-repeat center center; }
+#cui-login .cui-login-form .btn-login:hover { background: url(../images/login_btn_hover.png) no-repeat center center; }
+
+/* 公用头部    */
+.header { width: 100%; height: 86px; margin: 0; padding: 0; overflow: hidden; position: relative; }
+.header .cui-platform-logo { height: 86px; padding: 0; margin: 0; float: left; background: url(../images/nav_logo_bg.png) no-repeat; background-size: 100%; position: absolute; z-index: 2; max-width: 180px; }
+.header .cui-platform-logo img { width: 100%; height: 100%; }
+.header .cui-platform-nav { float: left; margin: 0; padding: 0; width: 100%; padding-left: 180px; }
+.header .cui-platform-nav ul { width: 100%; height: 86px; background: url(../images/nav_tab_normal.png) repeat-x; margin-bottom: 0; }
+.header .cui-platform-nav li { width: 11.1111%; max-width: 110px; height: 86px; line-height: 86px; float: left; font-size: 16px; text-align: center; cursor: pointer; color: #13a189; }
+.header .cui-platform-nav li.active { background: url(../images/nav_tab_selected.png) no-repeat center; color: #fff; }
+.header .cui-platform-nav li:hover { background: url(../images/nav_tab_hover.png) no-repeat center; color: #13a189; }
+
+/* 公共左侧菜单  */
+.cui-platform-container { width: 100%; height: 100%; overflow: hidden; padding: 0; }
+.cui-platform-container .cui-platform-row { width: 100%; height: 100%; padding: 0; margin: 0; }
+
+.cui-platform-menu { height: 100%; margin: 0; padding: 0; background-color: #454951; max-width: 180px; }
+.cui-platform-menu .cui-menu-item { width: 100%; line-height: 30px; }
+.cui-platform-menu .cui-menu-item a { font-size: 14px; display: block; height: 30px; color: #fff; padding-left: 25px; }
+.cui-platform-menu .cui-menu-item a.accordion-toggle { background: url(../images/left_tab_1ji_xia.png) no-repeat 145px center #30343d; }
+.cui-platform-menu .cui-menu-item a.collapsed { background: url(../images/left_tab_1ji_shang.png) no-repeat 145px center #30343d; }
+.cui-platform-menu .accordion-body { height: auto; }
+.cui-platform-menu ul { width: 100%; height: auto; }
+.cui-platform-menu li { width: 100%; height: 30px; line-height: 30px; color: #cbcbcb; cursor: pointer; list-style-type: disc; list-style-position: inside; text-align: left; padding-left: 10%; font-size: 14px; overflow: hidden; }
+.cui-platform-menu li a { color: #cbcbcb; }
+.cui-platform-menu li:hover, .cui-platform-menu li.active { background: url(../images/left_tab_selected_jiantou.png) no-repeat 145px center #13a189; color: #fff; }
+
+.cui-platform-content { height: 100%; overflow: hidden; margin: 0; padding: 10px; background-color: #f4f4f5; }
+.cui-platform-content h2 { width: 100%; height: 30px; background-color: #fff; padding: 0 10px; margin: 0; }
+.cui-platform-content h2 span { height: 20px; line-height: 20px; margin-top: 5px; font-size: 16px; border-left: 3px solid #13a189; }
+.cui-platform-content iframe { width: 100%; height: 100%; overflow: hidden; border: 0 none; background-color: #fff; margin-top: 10px; outline: 0; }
+
+/*# sourceMappingURL=platform.css.map */
